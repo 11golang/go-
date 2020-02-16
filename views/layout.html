@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>九牛一毛小说网</title>
+    <link rel="stylesheet" href="/static/layui/css/layui.css">
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo">小说管理系统后台</div>
+        <!-- 头部区域（可配合layui已有的水平导航） -->
+
+{{/*        <li class="layui-nav-item"><a href="">控制台</a></li>*/}}
+{{/*        <li class="layui-nav-item"><a href="">商品管理</a></li>*/}}
+{{/*        <li class="layui-nav-item"><a href="">用户</a></li>*/}}
+        <li class="layui-nav-item">
+            <a href="javascript:;">其它系统</a>
+            <dl class="layui-nav-child">
+                <dd><a href="">邮件管理</a></dd>
+                <dd><a href="">消息管理</a></dd>
+                <dd><a href="">授权管理</a></dd>
+            </dl>
+        </li>
+        </ul>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+
+
+                    {{.username}} 用户名
+                </a>
+
+            </li>
+            <li class="layui-nav-item"><a href="">登录</a></li>
+            <li class="layui-nav-item"><a href="bottle.html">注册</a></li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a class="" href="javascript:;">小说管理项目</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">现有小说目录</a></dd>
+                        <dd><a href="javascript:;">搜索小说</a></dd>
+                        <dd><a href="javascript:;">书架</a></dd>
+                        <dd><a href="javascript:;">书籍分类</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        {{.LayoutContent}}
+    </div>
+
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+        欢迎来到九牛一毛小说网
+    </div>
+</div>
+<script src="static/layui/layui.js"></script>
+<script>
+    //JavaScript代码区域
+    layui.use('element', function(){
+        var element = layui.element;
+
+    });
+</script>
+</body>
+</html>
+          
